@@ -1,4 +1,4 @@
-import { SCHEMA_URL } from "@/const";
+import { SCHEMA_URL } from "@/core/const";
 import { ProviderData, SearchProviderResponse } from "@/types";
 import { useQuery } from "@tanstack/react-query";
 import request from "graphql-request";
@@ -103,7 +103,7 @@ const mockTherapiQuotes = {
   ]
 }
 
-// Just for mock data
+// Just to mock data
 const filterListProvider = (providers: SearchProviderResponse['searchProviders']['providers']['providers']) => { 
   return providers
   .filter(provider => 

@@ -19,7 +19,7 @@ const SelectPage = () => {
                     status === 'error' && <p className="text-green-dark">{error.message}</p>
                 }
                 {
-                    status === 'success' && data && data.map((provider, i) => {
+                    status === 'success' && data?.map((provider, i) => {
                         return <ProviderCard
                             key={provider.id}
                             provider={provider}
