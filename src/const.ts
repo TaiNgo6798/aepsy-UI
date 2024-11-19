@@ -1,0 +1,1 @@
+export const SCHEMA_URL = 'https://api-dev.aepsy.com/graphql'
