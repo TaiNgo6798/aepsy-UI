@@ -78,9 +78,9 @@ const ProviderCard = ({
         </Button>
       </div>
 
-      <div className="flex flex-row md:flex-col items-start scale-[0.9] md:scale-100 items-center md:items-start w-full gap-6 md:gap-0">
+      <div className="flex flex-row md:flex-col scale-[0.9] md:scale-100 items-center md:items-start w-full gap-6 md:gap-0 justify-start">
         {/* === AVATAR SECTION === */}
-        <div className="flex items-center justify-center mt-4 w-fit relative mx-auto min-w-[150px] w-[150px] h-[150px] md:w-[200px] md:h-[200px]">
+        <div className="flex items-center justify-center mt-4 w-fit relative md:mx-auto md:max-w-[200px] max-w-[150px] min-w-[150px] w-[150px] h-[150px] md:w-[200px] md:h-[200px]">
           <img src={provider.avatarUrl} className="rounded-full" />
           <div className="hover:cursor-pointer hover:bg-blue-light w-[45px] h-[45px] md:w-[65px] md:h-[65px] rounded-full bg-white flex items-center justify-center absolute bottom-0 right-0 shadow-md">
             <SVG
