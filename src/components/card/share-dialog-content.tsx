@@ -38,7 +38,7 @@ const ShareDialogContent = ({
   return (
     <FormProvider {...form}>
       <DialogHeader>
-        <DialogTitle className='text-green-dark mb-4'>
+        <DialogTitle className='text-green-dark mb-4 text-xl'>
           Save favorite profiles and come back later
         </DialogTitle>
         <DialogDescription className='text-center'>

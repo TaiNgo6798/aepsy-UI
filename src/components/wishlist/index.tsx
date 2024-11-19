@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import SVG from "react-inlinesvg";
 import MainCTAButton from "../main-cta-button";
 import { Button } from "../ui/button";
-import { useMemo } from "react";
+import { Fragment, useMemo } from "react";
 
 const Wishlish = () => {
     const { wishlist, removeFromWishlist, clearWishlist } = useAepsyStore();
@@ -14,8 +14,8 @@ const Wishlish = () => {
     return (
         <div className="bg-white w-[400px] min-h-40 rounded-lg flex flex-col">
             {sortedWishlist.map((provider, i) => (
-                <>
-                    <div key={provider.id} className="p-2 text-green-dark flex items-center gap-3">
+                <Fragment key={provider.id}>
+                    <div className="p-2 text-green-dark flex items-center gap-3">
                         <img src={provider.avatarUrl} className="w-12 h-12 rounded-full" />
                         <div>
                             <p className="font-medium">{provider.fullName}</p>
@@ -32,7 +32,7 @@ const Wishlish = () => {
                         "w-full h-[1px] bg-gray-100 my-2",
                         i === wishlist.length - 1 && 'hidden'
                     )} />
-                </>
+                </Fragment>
             ))}
 
             <div className="px-4 mt-6">

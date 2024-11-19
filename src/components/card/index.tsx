@@ -78,30 +78,34 @@ const ProviderCard = ({
         </Button>
       </div>
 
-      {/* === AVATAR SECTION === */}
-      <div className="flex items-center justify-center mt-4 w-fit relative mx-auto">
-        <img src={provider.avatarUrl} className="w-[200px] h-[200px] rounded-full" />
-        <div className="hover:cursor-pointer hover:bg-blue-light w-[65px] h-[65px] rounded-full bg-white flex items-center justify-center absolute bottom-0 right-0 shadow-md">
-          <SVG
-            src={playIcon}
-            className="ml-1 text-primary"
-          />
+      <div className="flex flex-row md:flex-col items-start scale-[0.9] md:scale-100 items-center md:items-start w-full gap-6 md:gap-0">
+        {/* === AVATAR SECTION === */}
+        <div className="flex items-center justify-center mt-4 w-fit relative mx-auto min-w-[150px] w-[150px] h-[150px] md:w-[200px] md:h-[200px]">
+          <img src={provider.avatarUrl} className="rounded-full" />
+          <div className="hover:cursor-pointer hover:bg-blue-light w-[45px] h-[45px] md:w-[65px] md:h-[65px] rounded-full bg-white flex items-center justify-center absolute bottom-0 right-0 shadow-md">
+            <SVG
+              src={playIcon}
+              className="ml-1 text-primary"
+            />
+          </div>
+        </div>
+
+        {/* === INFO SECTION === */}
+        <div className=''>
+          <div className="flex items-center gap-2 mt-6">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+            </span>
+            <p className="text-green-600 font-medium">Tomorrow</p>
+          </div>
+          <p className="font-medium text-2xl mt-1">{provider.fullName}</p>
+          <p className="mt-4 text-gray-400">{provider.yearsOfExperience + 6} years of experience, {capitalize(provider.title)}</p>
         </div>
       </div>
 
-      {/* === INFO SECTION === */}
-      <div className="flex items-center gap-2 mt-6">
-        <span className="relative flex h-2 w-2">
-          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-          <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
-        </span>
-        <p className="text-green-600 font-medium">Tomorrow</p>
-      </div>
-      <p className="font-medium text-2xl mt-1">{provider.fullName}</p>
-      <p className="mt-4 mb-5 text-gray-400">{provider.yearsOfExperience + 6} years of experience, {capitalize(provider.title)}</p>
-
       {/* === TAGS SECTION === */}
-      <div className="flex gap-2 overflow-x-scroll">
+      <div className="flex gap-2 overflow-x-scroll mt-5">
         {provider.tags.map((tag) => {
           return <div key={tag} className="w-fit h-auto bg-blue-light text-green-dark px-2 py-1 rounded-full">
             <p className="text-sm font-medium break-keep whitespace-nowrap">{tag}</p>
@@ -119,7 +123,7 @@ const ProviderCard = ({
 
       {/* === FOOTER SECTION === */}
       <div className="h-[1px] bg-green-light mt-2 -mx-6"></div>
-      <div className="flex gap-3 overflow-x-scroll items-center -mx-1 h-10">
+      <div className="flex gap-3 overflow-x-scroll items-center -mx-1 h-10 overflow-y-hidden">
         {provider.therapyQuotes.map((quote, i) => {
           return <div key={quote} className="flex gap-1 items-center w-fit text-gray-400">
             <SVG
