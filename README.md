@@ -1,50 +1,33 @@
-# React + TypeScript + Vite
+# Aepsy UI Assigment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Techstack:
+- Shadcn UI
+- Tailwind CSS
+- Zustand - for state management
+- React query - for handling API
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### Commands
+```
+npm i
+npm run dev
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### Screenshots
+1. Desktop
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+![TaiNgo 2024-11-20 at 06 20 54](https://github.com/user-attachments/assets/bfcecf99-0a91-4a8a-bd48-ef4a2da671f4)
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+2. Mobile
+
+![TaiNgo 2024-11-20 at 06 22 24](https://github.com/user-attachments/assets/11ddc57c-26f5-45a1-b499-06b0207ca1e7)
+
+3. Wishlist
+
+![TaiNgo 2024-11-20 at 06 22 46](https://github.com/user-attachments/assets/13cd4492-a78c-45ed-bb24-181d8d42ba82)
+
+4. Sharing
+
+![TaiNgo 2024-11-20 at 06 23 18](https://github.com/user-attachments/assets/b626ecc7-5d8e-4ca0-9231-e8124a333676)
+![TaiNgo 2024-11-20 at 06 23 36](https://github.com/user-attachments/assets/27f8835b-3aa9-4aa8-96d5-410cabf128ce)
+
+
